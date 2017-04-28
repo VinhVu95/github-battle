@@ -50,3 +50,15 @@ li{
 	width: 120px;
 	border-radius: 50%;
 }
+
+.nav{
+	display: flex;
+}
+
+.active{
+	font-weight: bold;
+}
+
+.nav li{
+	margin-right: 15px;
+}
