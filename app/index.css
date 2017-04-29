@@ -1,64 +1,98 @@
 body {
-	font-family: -apple-system,BlinkMacSystemFont,SegoeUI,Roboto,Oxygen-sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
 }
 
-.container{
-	max-width: 1200px;
-	margin: 0 auto;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-ul{
-	padding: 0;
+a {
+  text-decoration: none;
+  color: #d0021b;
 }
 
-li{
-	list-style-type: none;
+ul {
+  padding: 0;
 }
 
-.languages{
-	display: flex;
-	justify-content: center;
+li {
+  list-style-type: none;
 }
 
-.languages li{
-	margin: 10px; 
-	font-weight: bold;
-	cursor: pointer;
+.button {
+  color: #e6e6e6;
+  background: #0a0a0a;
+  border: none;
+  font-size: 16px;
+  border-radius: 3px;
+  width: 200px;
+  text-align: center;
+  display: block;
+  padding: 7px 0;
+  margin: 10px auto;
 }
 
-.popular-list{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content:space-around;
+.button:hover:enabled {
+  background: linear-gradient(#1a1a1a,#0a0a0a);
+  color: #fff;
+  text-decoration: none;
 }
 
-.popular-item{
-	margin: 50px;
-	text-align: center;
+.button:active {
+  transform: translateY(1px);
 }
 
-.popular-rank{
-	font-size: 20px;
-	margin: 10px;
+.avatar {
+  width: 150px;
+  border-radius: 50%;
 }
 
-.space-list-items{
-	margin-bottom: 7px;
+.space-list-items {
+  margin-bottom: 7px;
 }
 
-.avatar{
-	width: 120px;
-	border-radius: 50%;
+.languages {
+  display: flex;
+  justify-content: center;
 }
 
-.nav{
-	display: flex;
+.languages li {
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.active{
-	font-weight: bold;
+.popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.nav li{
-	margin-right: 15px;
+.popular-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.popular-rank {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav li {
+  margin-right: 15px;
+}
+
+.active {
+  font-weight: bold;
 }
