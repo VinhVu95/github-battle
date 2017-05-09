@@ -1,7 +1,10 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
+//NODE_ENV to production
+//minify
 
-module.exports ={
+var config ={
 	entry: './app/index.js',
 	output: {
 		path: path.resolve(__dirname,'dist'),
@@ -23,3 +26,17 @@ module.exports ={
     	})
   	]
 }
+
+if(process.env.NODE_ENV === 'production'){
+	config.plugins.push(
+		new webpack.DefinePlugin({
+			'process.env' : {
+				//set node environment inside code webpack will compile
+				'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+			}
+		}),
+		new webpack.optimize.UglifyJsPlugin() //minify our code
+	)
+}
+
+module.exports = config;
